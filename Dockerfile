@@ -18,8 +18,9 @@ RUN echo "deb http://apt.dockerproject.org/repo debian-jessie main" \
  && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
-RUN curl -L https://github.com/docker/compose/releases/download/1.25.4/ \
+RUN curl -L https://github.com/docker/compose/releases/download/1.29.1/\
 docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose; \
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose; \
     chmod +x /usr/local/bin/docker-compose
 
 USER jenkins
