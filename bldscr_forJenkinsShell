@@ -20,8 +20,8 @@ if [ $ERR -eq0 ]; then
   if [ $CODE -eq 200 ]; then
     echo "Test passed - Tagging"
     HASH=$(git rev-parse --short HEAD)
-    sudo docker tag -f jenkins_identidock bucketea/identidock_auto:$HASH
-    sudo docker tag -f jenkins_identidock bucketea/identidock_auto:newest
+    sudo docker tag jenkins_identidock bucketea/identidock_auto:$HASH
+    sudo docker tag jenkins_identidock bucketea/identidock_auto:newest
     echo "Pushing"
     sudo docker login -u bucketea -p Jung.2202 
     sudo docker push bucketea/identidock_auto:$HASH
