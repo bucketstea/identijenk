@@ -23,8 +23,8 @@ if [ $ERR -eq 0 ]; then
     sudo docker tag jenkins_identidock bucketea/identidock_auto:$HASH
     sudo docker tag jenkins_identidock bucketea/identidock_auto:newest
     echo "Pushing"
-##docker login username password
-    sudo docker login -u **** -p ****
+##docker login. If you try it 1st time, enter username and password with option[-u][-p]
+    sudo docker login
     sudo docker push bucketea/identidock_auto:$HASH
     sudo docker push bucketea/identidock_auto:newest
   else
