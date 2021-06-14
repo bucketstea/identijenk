@@ -1,3 +1,9 @@
+#!/bin/sh
+
+##################################################test
+ls -la
+sudo /usr/bin/docker-compose version
+
 ##################################################Default compose args
 COMPOSE_ARGS=" -f jenkins.yml -p jenkins "
 
