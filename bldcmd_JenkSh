@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ##################################################test
 ls -la
 sudo /usr/bin/docker-compose version
